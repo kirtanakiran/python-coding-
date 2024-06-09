@@ -1,8 +1,13 @@
 class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-        index = 0
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[index] = nums[i]
-                index += 1
-        return index
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if len(nums) <= 2:
+            return len(nums)  # Fix: return the length of the list
+
+        slow = 2
+
+        for fast in range(2, len(nums)):
+            if nums[fast] != nums[slow - 2]:
+                nums[slow] = nums[fast]
+                slow += 1
+        
+        return slow
