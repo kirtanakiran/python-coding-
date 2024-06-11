@@ -1,6 +1,6 @@
 class Solution:
     def candy(self, ratings: List[int]) -> int:
-        n = len(strings)
+        n = len(ratings)
         candies = [1] * n
 
         for i in range(1, n):
