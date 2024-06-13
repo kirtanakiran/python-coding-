@@ -19,7 +19,3 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return i + 1
 
-# Example usage
-arr = [38, 27, 43, 3, 9, 82, 10]
-quick_sort_in_place(arr, 0, len(arr) - 1)
-print(arr)  # Output should be [3, 9, 10, 27, 38, 43, 82]
